@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Produtos - StarBooks</title>
+    <style>
+        /* Estilos CSS para as cores padrão da tabela */
+        table {
+            border-collapse: collapse;
+            margin: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        /* Estilos CSS para as cores modificadas para daltonismo */
+        .daltonismo {
+    
+            background-color: #ffcccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Produtos da StarBooks</h1>
+    <button id="toggleDaltonism">Ativar/Desativar Daltonismo</button>
+    <table border="1" id="productTable">
+        <tr>
+            <th>Título do Livro</th>
+            <th>Autor</th>
+            <th>Gênero</th>
+            <th >Preço (R$)</th>
+            <th>Disponibilidade</th>
+        </tr>
+        <tr>
+            <td>Aventuras Espaciais</td>
+            <td>John Autorson</td>
+            <td>Ficção Científica</td>
+            <td>35,99</td>
+            <td>Em Estoque</td>
+        </tr>
+        <!-- Adicione mais linhas de produtos aqui -->
+
+    </table>
+
+    <script>
+        // Função para alternar entre as cores padrão e as cores para daltonismo
+        function toggleDaltonism() {
+            const table = document.getElementById('productTable');
+            if (table.classList.contains('daltonismo')){
+                table.classList.remove('daltonismo');
+            }
+            else{
+                table.classList.add('daltonismo')
+            }
+            
+    
+        }
+
+        // Adicionar um ouvinte de evento para o botão
+        const button = document.getElementById('toggleDaltonism');
+        button.addEventListener("click", toggleDaltonism);
+        
+             
+        
+    </script>
+</body>
+</html>
